@@ -1,6 +1,34 @@
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log("The color is green.");
-    console.log('no more declarative thingy')
+let timer = null
+
+function main () {
+  const screenshot = captureScreen()
+  console.log('tick tick')
+}
+
+function startTracking () {
+  console.log('start background')
+  if (timer === null) {
+    timer = setInterval(main, 1000)
+  }
+}
+
+function stopTracking () {
+  console.log('stop background')
+  clearInterval(timer)
+  timer = null
+}
+
+function captureScreen() {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  },
+  function (tabs) {
+    chrome.tabs.captureVisibleTab(null 
+      ,{ format: "png"},
+      function (src) {
+        console.log('img src', src)
+      }
+    );
   });
-});
+}

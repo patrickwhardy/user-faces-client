@@ -1,8 +1,8 @@
 {
-  "name": "Getting Started Example",
+  "name": "User Faces",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "permissions": ["activeTab"],
+  "description": "Sentiment Tracking for Usability Testing",
+  "permissions": ["<all_urls>", "activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
