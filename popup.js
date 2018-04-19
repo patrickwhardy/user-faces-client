@@ -1,15 +1,8 @@
-let changeColor = document.getElementById('changeColor');
+let startTracking = document.getElementById('startTracking');
+let stopTracking = document.getElementById('stopTracking');
+let generateReport = document.getElementById('generateReport');
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
-
-changeColor.onclick = function(element) {
-  // let color = element.target.value;
-  //   chrome.tabs.executeScript(
-  //       tabs[0].id,
-  //       {code: 'document.body.style.backgroundColor = "' + color + '";'});
+startTracking.onclick = function(element) {
   chrome.tabs.query({
     active: true, 
     currentWindow: true 

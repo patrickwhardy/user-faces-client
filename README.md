@@ -1,2 +1,2 @@
 # user-faces-client
-An app for tracking user sentiment during usability testing
+A Chrome Extension for tracking user sentiment during usability testing
