@@ -5,7 +5,6 @@ let generateReport = document.getElementById('generateReport');
 startTracking.onclick = function(element) {
   console.log('start popup')
   chrome.extension.getBackgroundPage().startTracking()
-
 }
 
 stopTracking.onclick = function(element) {
@@ -15,10 +14,10 @@ stopTracking.onclick = function(element) {
 
 function openReport() {
   chrome.tabs.create(
-      { url: chrome.runtime.getURL("index.html") },
-      function(tab) {
-        // $('body').append("<img src='" + src + "'></img>");
-      }
-    );
+    { url: chrome.runtime.getURL("index.html") },
+    function(tab) {
+      // $('body').append("<img src='" + src + "'></img>");
+    }
+  );
 }
 

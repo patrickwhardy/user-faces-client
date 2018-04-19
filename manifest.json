@@ -2,7 +2,8 @@
   "name": "User Faces",
   "version": "1.0",
   "description": "Sentiment Tracking for Usability Testing",
-  "permissions": ["<all_urls>", "activeTab"],
+  "options_page": "options.html",
+  "permissions": ["<all_urls>", "activeTab", "tabs"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
