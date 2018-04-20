@@ -12,12 +12,11 @@ stopTracking.onclick = function(element) {
   console.log('stop popup')
 }
 
-function openReport() {
+generateReport.onclick = function(element) {
   chrome.tabs.create(
     { url: chrome.runtime.getURL("index.html") },
     function(tab) {
-      // $('body').append("<img src='" + src + "'></img>");
+      return
     }
   );
 }
-

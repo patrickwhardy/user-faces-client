@@ -2,9 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>User Faces Report</title>
   </head>
   <body>
-    <h1>Hi!</h1>
+    <h1 style="text-align: center">Frame by Frame Sentiment Analysis Results</h1>
+
+    <div class="results-container">
+      <table id="results-table" class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ScreenShot</th>
+            <th scope="col">User</th>
+            <th scope="col">Sentiment</th>
+          </tr>
+        </thead>
+        <tbody id="results-table-body">
+        </tbody>
+      </table>
+    </div>
+    <img id="webShot" style="height: 100px"></img>
+    <img id="screenShot" style="height: 100px"></img>
+    <script src="index.js"></script>
   </body>
 </html>
