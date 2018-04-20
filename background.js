@@ -1,12 +1,12 @@
 let timer, imageCapture, headShot, screenShot
-const reader = new FileReader()
+const baseUrl = "http://localhost:3000/"
 
 function main () {
   captureScreen()
   captureFace()
-  if (headShot && screenShot) {
+  // if (headShot && screenShot) {
     postImages(headShot, screenShot)
-  }
+  // }
   console.log('tick tick', headShot, screenShot)
 }
 
@@ -41,9 +41,9 @@ function captureFace () {
   if (imageCapture) {
     imageCapture.takePhoto().then(blob => {
       console.log('Took photo:', blob);
+      const reader = new FileReader()
       reader.readAsDataURL(blob)
       headShot = reader.result
-      debugger
       console.log('headshot', reader.result)
     }).catch(err => console.log('you got errrred again!', err))
   }
@@ -66,5 +66,18 @@ function captureScreen() {
 }
 
 function postImages(faceShot, screenShot) {
-
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", baseUrl + 'track_event', true);
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      console.log('got de responz', xhr.responseText)
+    }
+  }
+  const mockBody = {
+    head_shot: 'hi',
+    screen_shot: 'bye'
+  }
+  
+  xhr.send(mockBody)
 }

@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "Sentiment Tracking for Usability Testing",
   "options_page": "options.html",
-  "permissions": ["<all_urls>", "activeTab", "tabs"],
+  "permissions": ["<all_urls>", "activeTab", "tabs", "http://localhost/3000/"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
