@@ -45,7 +45,7 @@ function renderResultsTable(results) {
 
     // build sentimentTD
     let sentimentTD = document.createElement("td")
-    let sentiment = document.createTextNode(JSON.stringify(result.sentiment))
+    let sentiment = document.createTextNode(formatSentiment(result.sentiment))
     sentimentTD.appendChild(sentiment)
 
     row.appendChild(screenShotTD)
@@ -55,6 +55,10 @@ function renderResultsTable(results) {
   })
 }
 
+function formatSentiment (sentiment) {
+  // TODO fill in when contract is known
+  return JSON.stringify(sentiment)
+}
 
 const images = [{
   sentiment: {
