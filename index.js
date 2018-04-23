@@ -6,7 +6,7 @@ fetchReport()
 
 function fetchReport() {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", baseUrl + 'api', true);
+  xhr.open("GET", baseUrl + 'report', true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
@@ -24,9 +24,9 @@ function generateUI(results) {
   renderResultsTable(results)
 }
 
-function renderResultsTable(results) {
+function renderResultsTable(response) {
   let resultsTable = document.getElementById("results-table-body")
-  results.forEach(result => {
+  response.forEach(result => {
     let row = document.createElement("tr")
 
     // build screenShot TD

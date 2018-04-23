@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
     <title>User Faces Report</title>
+    <meta charset="UTF-8">
   </head>
   <body>
-    <h1 style="text-align: center">User Sentiment Analysis Results</h1>
+    <div class="page-container">
+      <h1 style="text-align: center">User Sentiment Analysis Results</h1>
 
-    <div class="results-container">
-      <table style="margin: auto" id="results-table" class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">ScreenShot</th>
-            <th scope="col">User</th>
-            <th scope="col">Sentiment</th>
-          </tr>
-        </thead>
-        <tbody id="results-table-body">
-        </tbody>
-      </table>
+      <div class="results-container" style="margin: auto; width: 80%">
+        <table id="results-table" class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ScreenShot</th>
+              <th scope="col">User</th>
+              <th scope="col">Sentiment</th>
+            </tr>
+          </thead>
+          <tbody id="results-table-body">
+          </tbody>
+        </table>
+      </div>
+      <img id="webShot" style="height: 100px"></img>
+      <img id="screenShot" style="height: 100px"></img>
+      <script src="index.js"></script>
     </div>
-    <img id="webShot" style="height: 100px"></img>
-    <img id="screenShot" style="height: 100px"></img>
-    <script src="index.js"></script>
   </body>
 </html>
+
+
+
+
